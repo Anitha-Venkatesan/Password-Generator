@@ -61,7 +61,7 @@ function generatePassword() {
           confirmPassword += lowerArr[index];
           console.log("inputLower password:" +confirmPassword);
           newString = newString.concat(lowerArr);
-          //passLength--;
+          
          
         }
 
@@ -72,7 +72,7 @@ function generatePassword() {
           confirmPassword += upperArr[index];
           console.log("inputUpper password:" +confirmPassword);
           newString = newString.concat(upperArr);
-          //passLength--;
+          
 
         }
 
@@ -83,7 +83,7 @@ function generatePassword() {
           confirmPassword += numberArr[index];
           console.log("inputNumber password:" +confirmPassword);
           newString = newString.concat(numberArr);
-          //passLength--;
+          
           
         }
 
@@ -94,7 +94,7 @@ function generatePassword() {
           confirmPassword += symbolArr[index];
           console.log("inputSymbol password:" +confirmPassword);
           newString = newString.concat(symbolArr);
-          //passLength--;
+          
 
         
         }
