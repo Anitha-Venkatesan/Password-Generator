@@ -37,6 +37,7 @@ function generatePassword() {
     {
       alert("Password Length must be 8-128 characters");
     }
+    passLength = parseInt(passLength);
     
     
     var inputLower = confirm("Do you want to use Lowercase?"); 
@@ -44,37 +45,69 @@ function generatePassword() {
     var inputNumber = confirm("Do you want to use Numbers?"); 
     var inputSymbol = confirm("Do yo want to use Symbols?");
 
-    var newString= [];
-    
+  
     if(inputLower || inputUpper || inputNumber || inputSymbol)
     {
+      
+      
+      var index;
+      var confirmPassword = '';
+      var newString= [];
+          
         if (inputLower) {
-          newString = newString.concat(lowerArr);
 
+
+          index = Math.floor(Math.random() * lowerArr.length);
+          confirmPassword += lowerArr[index];
+          console.log("inputLower password:" +confirmPassword);
+          newString = newString.concat(lowerArr);
+          //passLength--;
+         
         }
 
         if (inputUpper) {
+          
+         
+          index = Math.floor(Math.random() * upperArr.length);
+          confirmPassword += upperArr[index];
+          console.log("inputUpper password:" +confirmPassword);
           newString = newString.concat(upperArr);
+          //passLength--;
 
         }
 
         if (inputNumber) {
+
+          
+          index = Math.floor(Math.random() * numberArr.length);
+          confirmPassword += numberArr[index];
+          console.log("inputNumber password:" +confirmPassword);
           newString = newString.concat(numberArr);
+          //passLength--;
+          
         }
 
         if (inputSymbol) {
+          
+         
+          index = Math.floor(Math.random() * symbolArr.length);
+          confirmPassword += symbolArr[index];
+          console.log("inputSymbol password:" +confirmPassword);
           newString = newString.concat(symbolArr);
-        }
-        console.log(newString);
+          //passLength--;
 
-        var confirmPassword ='';
-        var newPassword;
-        for (i=0; i<passLength; i++){
-          newPassword = Math.floor(Math.random() * newString.length);
-          confirmPassword += newString[newPassword];
+        
+        }
+        
+        passLength = passLength - confirmPassword.length;
+
+        for (i=0; i< passLength; i++){
+          index = Math.floor(Math.random() * newString.length);
+          console.log(newString);
+          confirmPassword += newString[index];
+          console.log("Confirm password:" +confirmPassword);
         }
 
-        alert("Generated Password :" + confirmPassword);
         return confirmPassword;
       
     }
