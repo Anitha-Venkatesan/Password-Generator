@@ -7,9 +7,14 @@ function writePassword() {
   var password = generatePassword();
 
   var passwordText = document.querySelector("#password");
-  
-  passwordText.value = password;
 
+  if(password)
+  {
+    passwordText.value = password;
+
+  }
+  
+  
 }
 
 // Add event listener to generate button
@@ -101,7 +106,7 @@ function generatePassword() {
       }
      
       else{  
-        alert("Select atleast one option above");   
+        alert("Select atleast one of the character types above");   
       }         
 
 }
