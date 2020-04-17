@@ -6,6 +6,8 @@ Creating an application that generates a random password based on user-selected 
 
 ### Technologies Used
 * Javascript
+* HTML
+* CSS
 
 ### Installation
 * `git clone git@github.com:Anitha-Venkatesan/Password-Generator.git
@@ -13,7 +15,7 @@ Creating an application that generates a random password based on user-selected 
 * Open index.html in browser
 
 ### URL
-[Demo URL][https://anitha-venkatesan.github.io/Password-Generator/]
+[Demo URL](https://anitha-venkatesan.github.io/Password-Generator/)
 
 ### References
 * https://www.w3schools.com/js/js_array_methods.asp
