@@ -4,6 +4,12 @@ Homework3- Password Generator
 ### Objective
 Creating an application that generates a random password based on user-selected criteria.
 
+### Description
+* When I use the website, it will prompt the user for the input.
+* Then it prompts user for password length, should be greater than 8 and less than 128 characters.
+* Then it prompts user to ask for special characters to use in password.
+* After selecting the characters, the application will randomly generate the password with the characters and display it on the screen.
+
 ### Technologies Used
 * Javascript
 * HTML
